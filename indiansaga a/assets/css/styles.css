@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+    font-family: 'Cinzel', serif;
+    background-color: #f4f1e1; /* Light parchment color */
+    color: #3e2a47; /* Dark earthy tone for text */
+}
+
+.hero-section {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+h1, p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Soft shadow for ancient effect */
+}
+
+.navbar {
+    background-color: #3e2a47; /* Deep purple-brown */
+}
+
+.navbar a {
+    color: #f4e1c1; /* Soft golden color for links */
+}
+
+.navbar a:hover {
+    color: #ffcc00; /* Bright golden on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #3e2a47;
+    color: #f4e1c1;
+}
+#backToTop {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 1000;
+    display: none;
+    background-color: #6b4f2d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  #backToTop:hover {
+    background-color: #5a3f23;
+  }
+  .section-image {
+    width: 100%;
+    height: 250px; /* You can adjust this value */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .card-img-top {
+    width: 100%;
+    height: 500px; /* You can adjust this value */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
