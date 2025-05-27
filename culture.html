@@ -6,10 +6,16 @@
   <title>Culture - Indiansaga</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css"> <!-- Your ancient-look styles -->
+  <script>
+    // Apply dark mode immediately before the page renders
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark-mode");
+    }
+  </script>  
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Indiansaga</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavCulture" aria-controls="navbarNavCulture" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,14 +31,14 @@
           <li class="nav-item"><a class="nav-link" href="monuments.html">Monuments</a></li>
           <li class="nav-item"><a class="nav-link active" href="culture.html">Culture</a></li>
           <li class="nav-item"><a class="nav-link" href="timeline.html">Timeline</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>        
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section for Culture -->
-  <div class="hero-section text-center text-light" style="background: url('assets/images/indian_festival.jpg') no-repeat center center; background-size: cover; height: 60vh;">
+  <div class="hero-section text-center text-light" style="background: url('assets/images/indian_festival.jpg') no-repeat center center; background-size: cover; height: 60vh; margin-top: 70px;">
     <div class="hero-content d-flex flex-column justify-content-center h-100">
       <h1 class="display-4 fw-bold">Indian Culture</h1>
       <p class="lead">A Celebration of Art, Literature, Festivals & Cuisine</p>
@@ -43,37 +49,37 @@
   <div class="container my-5">
 
     <!-- Art & Architecture -->
-    <section class="mb-5">
+    <section class="mb-5 scroll-reveal">
       <h2 class="text-center">Art & Architecture</h2>
       <p>
         From the intricate carvings of temple complexes to the frescoes of Ajanta, Indian art and architecture showcase a fusion of spiritual vision and technical mastery.
       </p>
       <div class="row g-4">
-        <div class="col-md-6">
+        <div class="col-md-6 scroll-reveal">
           <img src="assets/images/ajanta.jpg" class="img-fluid rounded section-image" alt="Ajanta Caves">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 scroll-reveal">
           <img src="assets/images/temple_sculpture.jpg" class="img-fluid rounded section-image" alt="Temple Sculpture">
         </div>
       </div>
     </section>
 
     <!-- Literature & Philosophy -->
-    <section class="mb-5">
+    <section class="mb-5 scroll-reveal">
       <h2 class="text-center">Literature & Philosophy</h2>
       <p>
         Ancient texts like the Vedas and the epics—Mahabharata and Ramayana—laid the foundations of Indian thought. Later literature in Sanskrit, Persian, and regional languages enriched the subcontinent’s philosophical discourse.
       </p>
       <div class="row g-4">
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center scroll-reveal">
           <img src="assets/images/vedic_scripture.jpg" class="img-fluid rounded mb-2 section-image" alt="Vedic Scripture">
           <p><strong>The Vedas</strong></p>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center scroll-reveal">
           <img src="assets/images/ramayana.jpg" class="img-fluid rounded mb-2 section-image" alt="Ramayana Manuscript">
           <p><strong>Ramayana</strong></p>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center scroll-reveal">
           <img src="assets/images/medieval_poetry.jpg" class="img-fluid rounded mb-2 section-image" alt="Medieval Poetry">
           <p><strong>Sufi & Bhakti Poems</strong></p>
         </div>
@@ -81,21 +87,21 @@
     </section>
 
     <!-- Festivals & Traditions -->
-    <section class="mb-5">
+    <section class="mb-5 scroll-reveal">
       <h2 class="text-center">Festivals & Traditions</h2>
       <p>
         India’s calendar is dotted with vibrant festivals—Diwali’s lights, Holi’s colors, Eid’s feasting, and Navratri’s dance—each reflecting regional customs and a shared spirit of community.
       </p>
       <div class="row g-4">
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center scroll-reveal">
           <img src="assets/images/diwali.jpg" class="img-fluid rounded mb-2 section-image" alt="Diwali">
           <p><strong>Diwali</strong></p>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center scroll-reveal">
           <img src="assets/images/holi.jpg" class="img-fluid rounded mb-2 section-image" alt="Holi">
           <p><strong>Holi</strong></p>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center scroll-reveal">
           <img src="assets/images/navratri.jpg" class="img-fluid rounded mb-2 section-image" alt="Navratri">
           <p><strong>Navratri</strong></p>
         </div>
@@ -103,21 +109,21 @@
     </section>
 
     <!-- Cuisine -->
-    <section class="mb-5">
+    <section class="mb-5 scroll-reveal">
       <h2 class="text-center">Cuisine</h2>
       <p>
         A riot of flavors—from the spicy curries of the South to the savory street foods of the North—Indian cuisine is as diverse as its culture, blending regional ingredients with time-honored techniques.
       </p>
       <div class="row g-4">
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center scroll-reveal">
           <img src="assets/images/dosa.jpg" class="img-fluid rounded mb-2 section-image" alt="Dosa">
           <p><strong>Dosa</strong> (South India)</p>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center scroll-reveal">
           <img src="assets/images/chole_bhature.jpg" class="img-fluid rounded mb-2 section-image" alt="Chole Bhature">
           <p><strong>Chole Bhature</strong> (North India)</p>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center scroll-reveal">
           <img src="assets/images/gujarati_thali.jpg" class="img-fluid rounded mb-2 section-img" alt="Gujarati Thali">
           <p><strong>Gujarati Thali</strong> (West India)</p>
         </div>
