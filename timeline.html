@@ -56,11 +56,17 @@
       border-radius: 4px;
     }
   </style>
+  <script>
+    // Apply dark mode immediately before the page renders
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark-mode");
+    }
+  </script>  
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Indiansaga</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavTimeline" aria-controls="navbarNavTimeline" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,14 +82,14 @@
           <li class="nav-item"><a class="nav-link" href="monuments.html">Monuments</a></li>
           <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
           <li class="nav-item"><a class="nav-link active" href="timeline.html">Timeline</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>        
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <div class="text-center text-light" style="background: url('assets/images/timeline-banner.jpg') no-repeat center center; background-size: cover; height: 60vh;">
+  <div class="text-center text-light scroll-reveal " style="background: url('assets/images/timeline-banner.jpg') no-repeat center center; background-size: cover; height: 60vh; margin-top: 70px;">
     <div class="d-flex flex-column justify-content-center align-items-center h-100" style="background-color: rgba(0,0,0,0.5);">
       <h1 class="display-4 fw-bold">Historical Timeline</h1>
       <p class="lead">From Ancient Civilizations to Modern India</p>
@@ -91,56 +97,56 @@
   </div>
 
   <!-- Timeline -->
-  <div class="container my-5">
-    <div class="timeline-wrap">
+  <div class="container my-5 scroll-reveal">
+    <div class="timeline-wrap scroll-reveal">
         <div class="timeline-bar"></div>
         
-        <div class="timeline-event" data-detail="The Indus Valley Civilization (c. 3300–1300 BCE) was one of the world’s earliest urban cultures, renowned for planned cities like Harappa and Mohenjo‑Daro, sophisticated drainage systems, and long‑distance trade.">
+        <div class="timeline-event scroll-reveal" data-detail="The Indus Valley Civilization (c. 3300–1300 BCE) was one of the world’s earliest urban cultures, renowned for planned cities like Harappa and Mohenjo‑Daro, sophisticated drainage systems, and long‑distance trade.">
           <div class="circle">3300 BCE</div>
           <p>Indus Valley Civilization</p>
         </div>
         
-        <div class="timeline-event" data-detail="The Vedic Period (c. 1500–500 BCE) saw the composition of the Vedas, laying the foundations of Hindu philosophy, society, and ritual. It was also marked by the transition from nomadic pastoralism to settled agriculture.">
+        <div class="timeline-event scroll-reveal" data-detail="The Vedic Period (c. 1500–500 BCE) saw the composition of the Vedas, laying the foundations of Hindu philosophy, society, and ritual. It was also marked by the transition from nomadic pastoralism to settled agriculture.">
           <div class="circle">1500 BCE</div>
           <p>Vedic Period Begins</p>
         </div>
         
-        <div class="timeline-event" data-detail="Founded in 322 BCE by Chandragupta Maurya, the Maurya Empire unified most of the subcontinent. Under Ashoka (r. 269–232 BCE), it became a model of administration and spread Buddhism across Asia.">
+        <div class="timeline-event scroll-reveal" data-detail="Founded in 322 BCE by Chandragupta Maurya, the Maurya Empire unified most of the subcontinent. Under Ashoka (r. 269–232 BCE), it became a model of administration and spread Buddhism across Asia.">
           <div class="circle">322 BCE</div>
           <p>Maurya Empire</p>
         </div>
         
-        <div class="timeline-event" data-detail="The Gupta Empire (c. 320–550 CE) is often called India’s “Golden Age.” Advances in mathematics (concept of zero), astronomy, literature (Kalidasa), and art flourished under rulers like Chandragupta I and Samudragupta.">
+        <div class="timeline-event scroll-reveal" data-detail="The Gupta Empire (c. 320–550 CE) is often called India’s “Golden Age.” Advances in mathematics (concept of zero), astronomy, literature (Kalidasa), and art flourished under rulers like Chandragupta I and Samudragupta.">
           <div class="circle">320 CE</div>
           <p>Gupta “Golden Age”</p>
         </div>
         
-        <div class="timeline-event" data-detail="The Delhi Sultanate (1206–1526 CE) was established by Qutb‑ud‑din Aibak. Five successive dynasties (Mamluk, Khilji, Tughlaq, Sayyid, Lodi) brought Persianate culture, new architecture, and set the stage for later Mughal rule.">
+        <div class="timeline-event scroll-reveal" data-detail="The Delhi Sultanate (1206–1526 CE) was established by Qutb‑ud‑din Aibak. Five successive dynasties (Mamluk, Khilji, Tughlaq, Sayyid, Lodi) brought Persianate culture, new architecture, and set the stage for later Mughal rule.">
           <div class="circle">1206 CE</div>
           <p>Delhi Sultanate</p>
         </div>
         
-        <div class="timeline-event" data-detail="The Mughal Empire (1526–1857 CE), begun by Babur after Panipat, reached its zenith under Akbar, Jahangir, Shah Jahan, and Aurangzeb. It left a lasting legacy of syncretic culture and architectural masterpieces like the Taj Mahal.">
+        <div class="timeline-event scroll-reveal" data-detail="The Mughal Empire (1526–1857 CE), begun by Babur after Panipat, reached its zenith under Akbar, Jahangir, Shah Jahan, and Aurangzeb. It left a lasting legacy of syncretic culture and architectural masterpieces like the Taj Mahal.">
           <div class="circle">1526 CE</div>
           <p>Mughal Empire</p>
         </div>
         
-        <div class="timeline-event" data-detail="The First War of Independence (also called the Sepoy Mutiny) erupted in 1857, when Indian soldiers rebelled against East India Company rule. Though suppressed, it galvanized national consciousness and led to direct Crown rule.">
+        <div class="timeline-event scroll-reveal" data-detail="The First War of Independence (also called the Sepoy Mutiny) erupted in 1857, when Indian soldiers rebelled against East India Company rule. Though suppressed, it galvanized national consciousness and led to direct Crown rule.">
           <div class="circle">1857 CE</div>
           <p>First War of Independence</p>
         </div>
         
-        <div class="timeline-event" data-detail="The Indian National Congress was founded in 1885 to give Indians a voice in their government. Over the next six decades, it became the principal vehicle for the freedom struggle under leaders like Gandhi and Nehru.">
+        <div class="timeline-event scroll-reveal" data-detail="The Indian National Congress was founded in 1885 to give Indians a voice in their government. Over the next six decades, it became the principal vehicle for the freedom struggle under leaders like Gandhi and Nehru.">
           <div class="circle">1885 CE</div>
           <p>Indian National Congress</p>
         </div>
         
-        <div class="timeline-event" data-detail="On August 15, 1947, India achieved independence from British rule, partitioning into India and Pakistan. Jawaharlal Nehru became the first Prime Minister of the Dominion of India.">
+        <div class="timeline-event scroll-reveal" data-detail="On August 15, 1947, India achieved independence from British rule, partitioning into India and Pakistan. Jawaharlal Nehru became the first Prime Minister of the Dominion of India.">
           <div class="circle">1947 CE</div>
           <p>Independence</p>
         </div>
         
-        <div class="timeline-event" data-detail="On January 26, 1950, the Constitution of India came into effect, and India was declared a sovereign democratic republic. Dr. B.R. Ambedkar’s drafting ensured fundamental rights and a parliamentary system.">
+        <div class="timeline-event scroll-reveal" data-detail="On January 26, 1950, the Constitution of India came into effect, and India was declared a sovereign democratic republic. Dr. B.R. Ambedkar’s drafting ensured fundamental rights and a parliamentary system.">
           <div class="circle">1950 CE</div>
           <p>Republic of India</p>
         </div>
