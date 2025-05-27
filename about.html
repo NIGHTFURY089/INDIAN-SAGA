@@ -43,11 +43,17 @@
       padding: 30px;
     }
   </style>
+  <script>
+    // Apply dark mode immediately before the page renders
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark-mode");
+    }
+  </script>  
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Indiansaga</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAbout" aria-controls="navbarNavAbout" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,14 +69,15 @@
           <li class="nav-item"><a class="nav-link" href="monuments.html">Monuments</a></li>
           <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
           <li class="nav-item"><a class="nav-link" href="timeline.html">Timeline</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>    
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <div class="hero-section d-flex justify-content-center align-items-center text-center">
+ <div class="about-section no-dark">
+  <div class="hero-section d-flex justify-content-center align-items-center text-center scroll-reveal">
     <div class="hero-content">
       <h1 class="display-4 fw-bold">About Indiansaga</h1>
       <p class="lead">Crafting a Timeless Journey Through India’s Glorious Past</p>
@@ -78,10 +85,10 @@
   </div>
 
   <!-- About & Contact Content -->
-  <div class="container my-5">
+  <div class="container my-5 scroll-reveal">
     <div class="row gy-5">
       <!-- About Section -->
-      <div class="col-md-6">
+      <div class="col-md-6 scroll-reveal">
         <h2 class="section-heading">Our Mission</h2>
         <p>
           Indiansaga is dedicated to bringing India’s rich heritage to life. From the dawn of the Indus Valley Civilization to the vibrant tapestry of modern times, our goal is to create an immersive, educational experience that celebrates every chapter of India’s story.
@@ -92,19 +99,19 @@
       </div>
 
       <!-- Contact Form -->
-      <div class="col-md-6">
+      <div class="col-md-6 scroll-reveal">
         <h2 class="section-heading">Get in Touch</h2>
         <div class="contact-card">
           <form action="#" method="post">
-            <div class="mb-3">
+            <div class="mb-3 scroll-reveal">
               <label for="name" class="form-label">Your Name</label>
               <input type="text" class="form-control" id="name" placeholder="John Doe" required>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 scroll-reveal">
               <label for="email" class="form-label">Email Address</label>
               <input type="email" class="form-control" id="email" placeholder="john@example.com" required>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 scroll-reveal">
               <label for="message" class="form-label">Message</label>
               <textarea class="form-control" id="message" rows="5" placeholder="Your questions or feedback..." required></textarea>
             </div>
@@ -114,6 +121,7 @@
       </div>
     </div>
   </div>
+ </div>
 
   <!-- Footer -->
   <footer class="text-center py-4 bg-dark text-light">
