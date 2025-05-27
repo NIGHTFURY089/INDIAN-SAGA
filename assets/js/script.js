@@ -51,4 +51,61 @@ document.addEventListener("DOMContentLoaded", function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
-  
+  // script.js
+
+// Get the back to top button
+const backToTopButton = document.getElementById('backToTop');
+
+// Show or hide the button based on scroll position
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) { // Show button after scrolling 300px
+    backToTopButton.style.display = 'block';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
+
+// Smooth scroll to top when button clicked
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const revealElements = document.querySelectorAll(".scroll-reveal");
+
+  function revealOnScroll() {
+    revealElements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight - 100) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // Reveal elements already in view
+});
+// Dark Mode Toggle Script with localStorage
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  // Apply dark mode from localStorage on page load
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+  }
+
+  // Toggle function
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    // Save the preference
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
+});
